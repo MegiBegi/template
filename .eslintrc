@@ -16,7 +16,9 @@
   "ignorePatterns": [
     "*.js",
     "*.jsx",
-    "node_modules/"
+    "node_modules/",
+    "serviceWorker.ts",
+    "setupTests.ts"
   ],
   "extends": [
     "eslint:recommended",
