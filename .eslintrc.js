@@ -13,6 +13,7 @@ module.exports = {
     extends: [
         "plugin:react/recommended",
         "airbnb",
+        "airbnb-typescript",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended"
     ],
@@ -29,10 +30,12 @@ module.exports = {
         sourceType: module
     },
     plugins: [
-        react,
+        "react",
         "@typescript-eslint",
-        "react-hooks"
+        "react-hooks",
+        "jsx-a11y"
     ],
+    "ignorePatterns": ["*.js", "*.jsx", "node_modules/"],
     rules: {
         "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx", ".ts", ".tsx"] }],
         'import/extensions': ['error', 'ignorePackages', {
@@ -42,12 +45,10 @@ module.exports = {
             ts: 'never',
             tsx: 'never',
         }],
-        "spaced-comment": [error, always, {
+        "spaced-comment": ["error", "always", {
             markers: ["/"]
         }],
-        "no-multi-spaces": ["error", {
-            "ignoreProperties": false
-        }],
+        "no-multi-spaces": "error",
         indent: ["error", 4, { "SwitchCase": 1 }],
         quotes: [
             1,
@@ -58,6 +59,8 @@ module.exports = {
             "prefer-double"
         ],
         semi: ["error", "always"],
+        "array-element-newline": ["error", "always"],
+        "array-bracket-newline": ["error", "always"]
     }
 }
 

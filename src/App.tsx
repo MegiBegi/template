@@ -1,16 +1,9 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useEffect, useRef, useState, useCallback, useMemo, useReducer } from 'react'
 
 const App: FC = () => {
-   const apple = '@apple'
-   if (apple) { console.log(apple) } else {
-      return <h1>1</h1>
-   }
-   return <h1>2</h1>
-}
-
-const foe = {
-   fsdnks: 1, fnksnf: 2, fn2ksnf: 3, s: 4, asaddddd: 5, snjknsjknd: 3,
+   const array = [3, 4, 5, 6, 2, "shgfxdzxbhtdrg", 5]
+   return <h1>ja</h1>
 
 }
-useEffect(() => console.log(2), [])
+
 export default App;
