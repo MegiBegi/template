@@ -1,0 +1,107 @@
+{
+  "plugins": [
+    "react-hooks",
+    "react",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "ignorePatterns": [
+    "*.js",
+    "*.jsx",
+    "node_modules/"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "typescript",
+        "semi": false
+      }
+    ],
+    "arrow-spacing": "error",
+    "function-paren-newline": [
+      "error",
+      {
+        "minItems": 5
+      }
+    ],
+    "newline-per-chained-call": "error",
+    "no-unused-vars": "error",
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "function-call-argument-newline": [
+      "error",
+      "consistent"
+    ],
+    "no-multi-spaces": "error",
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false
+      }
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "react/default-props-match-prop-types": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "import/no-named-as-default": 0,
+    "react/style-prop-object": 0,
+    "react/jsx-closing-tag-location": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "quotes": [
+      1,
+      "single"
+    ],
+    "jsx-quotes": [
+      "warn",
+      "prefer-double"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  }
+}
