@@ -42,7 +42,9 @@
       {
         "singleQuote": true,
         "parser": "typescript",
-        "semi": false
+        "semi": false,
+        "tabWidth": 2,
+        "useTabs": true
       }
     ],
     "arrow-spacing": "error",
