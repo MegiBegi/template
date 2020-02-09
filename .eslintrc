@@ -2,7 +2,8 @@
   "plugins": [
     "react-hooks",
     "react",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "env": {
     "browser": true,
@@ -25,7 +26,9 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier/react",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:import/errors",
+    "plugin:import/warnings",
   ],
   "settings": {
     "react": {
@@ -104,6 +107,8 @@
       {
         "SwitchCase": 1
       }
-    ]
+    ],
+    "import/order": "error",
+    "import/no-unresolved": 0
   }
 }
