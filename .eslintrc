@@ -94,6 +94,7 @@
     ],
     "import/order": "error",
     "import/no-unresolved": 0,
-    "@typescript-eslint/member-delimiter-style": 0
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/camelcase": 0
   }
 }
