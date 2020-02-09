@@ -1,18 +1,18 @@
 {
-  "plugins": [
-    "react-hooks",
-    "react",
-    "prettier"
-  ],
   "env": {
     "browser": true,
     "node": true,
     "es6": true
   },
-  "parserOptions": {
-    "sourceType": "module"
-  },
-  "parser": "babel-eslint",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react-hooks",
+    "react",
+    "prettier",
+    "import",
+    "@typescript-eslint"
+  ],
   "ignorePatterns": [
     "*.js",
     "*.jsx",
@@ -25,7 +25,11 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier/react",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "settings": {
     "react": {
@@ -38,25 +42,17 @@
       {
         "singleQuote": true,
         "parser": "typescript",
-        "semi": false
+        "semi": false,
+        "tabWidth": 2,
+        "useTabs": true
       }
     ],
     "arrow-spacing": "error",
-    "function-paren-newline": [
-      "error",
-      {
-        "minItems": 5
-      }
-    ],
     "newline-per-chained-call": "error",
     "no-unused-vars": "error",
     "array-bracket-spacing": [
       "error",
       "never"
-    ],
-    "object-curly-spacing": [
-      "error",
-      "always"
     ],
     "function-call-argument-newline": [
       "error",
@@ -98,12 +94,10 @@
       "warn",
       "prefer-double"
     ],
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ]
+    "import/order": "error",
+    "import/no-unresolved": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-ignore": 0
   }
 }
