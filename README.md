@@ -1,6 +1,8 @@
+## Template for React.js projects configured with Typescript and ESLint
+
 # Available scripts
 
-## GitHub 
+### GitHub 
 
 To connect project to your GitHub profile use `git clone git@github.com:MegiBegi/template.git`
 
@@ -18,8 +20,8 @@ To connect project to your GitHub profile use `git clone git@github.com:MegiBegi
 * Typescript https://www.typescriptlang.org/docs/home.html
 * Eslint https://eslint.org/docs/user-guide/getting-started
 
-### State management (separate branch)
-Redux https://redux.js.org/introduction/getting-started
+
+### Note: Both relative and absolute imports available
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
