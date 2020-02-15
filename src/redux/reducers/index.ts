@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux'
 import app, { AppState } from 'redux/reducers/app'
-import users, { UsersState } from 'redux/reducers/users'
+import endpoints, { EndpointsState } from 'redux/reducers/endpoints'
 
 export interface RootState {
   app: AppState
-  users: UsersState
+  endpoints: EndpointsState
 }
 
 export default combineReducers({
   app,
-  users
+  endpoints
 })

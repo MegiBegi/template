@@ -1,34 +1,41 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { RootState } from 'redux/reducers'
 import * as appActions from 'redux/actions/app'
-import * as usersActions from 'redux/actions/users'
+import * as endpointsActions from 'redux/actions/endpoints'
 import { Noop } from 'types'
+import { Endpoints } from 'redux/reducers/endpoints'
 
 interface AppStateProps {
   isSidebarOpen: boolean
-  isLoggedIn: boolean
+  endpoints: Endpoints
 }
 
 interface AppDispatchProps {
   toggleSidebarStatus: Noop
-  toggleLoggedIn: Noop
+  fetchEndpoints: Noop
 }
 
 interface AppProps extends AppStateProps, AppDispatchProps {}
 
-const App: FC<AppProps> = () => {
+const App: FC<AppProps> = ({ fetchEndpoints }) => {
+  const componentDidMount = (): void => {
+    fetchEndpoints()
+  }
+
+  useEffect(componentDidMount, [])
+
   return <div />
 }
 
 const mapStateToProps = (state: RootState): AppStateProps => ({
   isSidebarOpen: state.app.isSidebarOpen,
-  isLoggedIn: state.users.isLoggedIn
+  endpoints: state.endpoints.endpoints
 })
 
 const mapDispatchToProps: AppDispatchProps = {
   toggleSidebarStatus: appActions.toggleSidebarStatus,
-  toggleLoggedIn: usersActions.toggleLoggedIn
+  fetchEndpoints: endpointsActions.fetchEndpoints
 }
 
 export default connect<AppStateProps, AppDispatchProps, {}, RootState>(
