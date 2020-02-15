@@ -23,5 +23,7 @@ To connect project to your GitHub profile use `git clone git@github.com:MegiBegi
 
 ### Note: Both relative and absolute imports available
 
+## Separate branch for Redux with Redux Thunk.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
